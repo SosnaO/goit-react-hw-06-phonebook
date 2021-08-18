@@ -1,8 +1,5 @@
-// import types from './counter_types.js';
 import shortid from 'shortid';
 import { createAction } from '@reduxjs/toolkit';
-
-// export const changeFilter=
 
 const addContact = createAction('counter/formSubmitHandler', ({ name, number }) => ({
     payload: {
@@ -11,14 +8,23 @@ const addContact = createAction('counter/formSubmitHandler', ({ name, number }) 
         number,
     }, 
 }));
-
 const deleteContact = createAction('counter/deleteContacts');
-
 const changeFilter = createAction('counter/changeFilter');
-
 
 // eslint-disable-next-line
 export default { addContact, deleteContact, changeFilter };
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

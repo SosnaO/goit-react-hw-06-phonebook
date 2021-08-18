@@ -1,7 +1,5 @@
-
 import { combineReducers } from "redux";
-// import types from './counter_types/counter_types.js';
-  import action from './counter-action.js'
+import action from './counter-action.js'
 import { createReducer } from "@reduxjs/toolkit";
 
 const items = createReducer([], {
@@ -17,6 +15,12 @@ export default combineReducers({
   items,
   filter
 });
+
+
+
+
+
+
 
 
 
