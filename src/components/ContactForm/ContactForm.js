@@ -30,16 +30,20 @@ export default function ContactForm({onSubmit}) {
     const findByName = contactName => {
      return contacts.some(({ name }) => name === contactName);
     };
+    const reset = () => {
+        setName("");
+        setNumber("");
+       };
 
     const handleSubmit=event=>{
       event.preventDefault();
         if (findByName(name)) {
             alert(`${name} is already in contacts!`);
+            reset();
             return;
         }
         dispatch(contactsAction.addContact({name, number}))
-        setName("");
-        setNumber("");
+        reset();
     };
 
     return(
